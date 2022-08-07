@@ -19,6 +19,7 @@
         font-family:sans-serif;
         background-color:#f2f2f2;
       }
+      /* navbar */
       #navbarMonstera{
       display: flex;
       padding:10px 30px;
@@ -45,6 +46,27 @@
         width:100%;
         height:2px;
       }
+      @media only screen and (max-width:900px) {
+        #navMid{
+          display: none;
+        }
+        #navEnd{
+          display: none;
+        }
+        #navbarMonstera{
+          display: flex;
+          justify-content: space-between;
+        }
+        #navbarMonstera:nth-child(1)::after{
+          content: "";
+          display: inline-block;
+          width:40px;
+          height:40px;
+          background-image: url(./photos/hamburger-menu-more-2-svgrepo-com.svg);
+          background-size:40px 40px;
+        }
+      }
+      /* banner */
       #midWhole{
         display: flex;
         justify-content: space-between;
@@ -120,6 +142,51 @@
         height:500px;
         right:0;
         bottom:0;
+      }
+      @media only screen and (max-width:900px) {
+        #midWhole{
+          display: block;
+          margin-top:50px;
+        }
+        #midWholePart1{
+          width:80%;
+        }
+        #monstera{
+          font-size:40px;
+        }
+        #midWholePart13{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .midWholePart13Parts{
+          width:80%;
+          margin-block:10px;
+        }
+        .midWholePart13Parts img{
+          margin-right:10px;
+        }
+        #feeding{
+          width:60px;
+          margin-left:-30px;
+        }
+        #care{
+          margin-left:-10px;
+        }
+        .midWholePart13Parts:nth-child(2){
+           margin-block:20px;
+        }
+        #midWhole>div:last-child{
+          position:relative;
+        }
+        #imgMain{
+          position: absolute;
+          width:90%;
+          height:400px;
+          top:50px;
+          bottom:0;
+          right:0;
+        }
       }
     </style>
   </head>
